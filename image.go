@@ -20,7 +20,7 @@ var (
 	// Maximum absolute skew factor of a single digit.
 	maxSkew = 0.01
 	// Number of background circles.
-	circleCount = 2
+	circleCount = 3
 )
 
 type Image struct {

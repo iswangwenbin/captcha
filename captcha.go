@@ -54,7 +54,7 @@ import (
 
 const (
 	// Default number of digits in captcha solution.
-	DefaultLen = 6
+	DefaultLen = 4
 	// The number of captchas created that triggers garbage collection used
 	// by default store.
 	CollectNum = 100
