@@ -18,9 +18,9 @@ var (
 	StdWidth  = 240
 	StdHeight = 80
 	// Maximum absolute skew factor of a single digit.
-	maxSkew = 0.1
+	maxSkew = 0.01
 	// Number of background circles.
-	circleCount = 5
+	circleCount = 2
 )
 
 type Image struct {
@@ -66,7 +66,7 @@ func NewImage(id string, digits []byte, width, height int) *Image {
 		x += m.numWidth + m.dotSize
 	}
 	// Draw strike-through line.
-	m.strikeThrough()
+	// m.strikeThrough()
 	// Apply wave distortion.
 	m.distort(m.rng.Float(5, 10), m.rng.Float(100, 200))
 	// Fill image with random circles.
@@ -147,9 +147,9 @@ func (m *Image) calculateSizes(width, height, ncount int) {
 }
 
 func (m *Image) drawHorizLine(fromX, toX, y int, colorIdx uint8) {
-	//for x := fromX; x <= toX; x++ {
-	//	m.SetColorIndex(x, y, colorIdx)
-	//}
+	for x := fromX; x <= toX; x++ {
+		m.SetColorIndex(x, y, colorIdx)
+	}
 }
 
 func (m *Image) drawCircle(x, y, radius int, colorIdx uint8) {
