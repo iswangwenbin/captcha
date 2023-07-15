@@ -13,8 +13,8 @@ import (
 	"math"
 )
 
-const (
-	// Standard width and height of a captcha image.
+// Standard width and height of a captcha image.
+var (
 	StdWidth  = 240
 	StdHeight = 80
 	// Maximum absolute skew factor of a single digit.
@@ -29,6 +29,14 @@ type Image struct {
 	numHeight int
 	dotSize   int
 	rng       siprng
+}
+
+func SetMaxSkew(max float64) {
+	maxSkew = max
+}
+
+func SetCircleCount(count int) {
+	circleCount = count
 }
 
 // NewImage returns a new captcha image of the given width and height with the

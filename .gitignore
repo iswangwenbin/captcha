@@ -6,3 +6,6 @@ capgen/*.wav
 capgen/capgen
 cangensounds/cangensounds
 capexample/capexample
+
+# IDE files
+.idea/*
