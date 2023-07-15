@@ -18,9 +18,9 @@ var (
 	StdWidth  = 240
 	StdHeight = 80
 	// Maximum absolute skew factor of a single digit.
-	maxSkew = 0.7
+	maxSkew = 0.1
 	// Number of background circles.
-	circleCount = 20
+	circleCount = 5
 )
 
 type Image struct {
@@ -147,9 +147,9 @@ func (m *Image) calculateSizes(width, height, ncount int) {
 }
 
 func (m *Image) drawHorizLine(fromX, toX, y int, colorIdx uint8) {
-	for x := fromX; x <= toX; x++ {
-		m.SetColorIndex(x, y, colorIdx)
-	}
+	//for x := fromX; x <= toX; x++ {
+	//	m.SetColorIndex(x, y, colorIdx)
+	//}
 }
 
 func (m *Image) drawCircle(x, y, radius int, colorIdx uint8) {
